@@ -22,7 +22,7 @@ class FormConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function enabled($value): static
+    public function enabled($value): self
     {
         $this->enabled = $value;
     
@@ -45,7 +45,7 @@ class FormConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function legacyErrorMessages($value): static
+    public function legacyErrorMessages($value): self
     {
         $this->legacyErrorMessages = $value;
     

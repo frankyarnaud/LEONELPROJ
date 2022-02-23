@@ -30,7 +30,7 @@ class TranslatorConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function enabled($value): static
+    public function enabled($value): self
     {
         $this->enabled = $value;
     
@@ -38,11 +38,10 @@ class TranslatorConfig
     }
     
     /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
-     *
+     * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
-    public function fallbacks(ParamConfigurator|array $value): static
+    public function fallbacks($value): self
     {
         $this->fallbacks = $value;
     
@@ -54,7 +53,7 @@ class TranslatorConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function logging($value): static
+    public function logging($value): self
     {
         $this->logging = $value;
     
@@ -66,7 +65,7 @@ class TranslatorConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function formatter($value): static
+    public function formatter($value): self
     {
         $this->formatter = $value;
     
@@ -78,7 +77,7 @@ class TranslatorConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function cacheDir($value): static
+    public function cacheDir($value): self
     {
         $this->cacheDir = $value;
     
@@ -91,7 +90,7 @@ class TranslatorConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function defaultPath($value): static
+    public function defaultPath($value): self
     {
         $this->defaultPath = $value;
     
@@ -99,11 +98,10 @@ class TranslatorConfig
     }
     
     /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
-     *
+     * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
-    public function paths(ParamConfigurator|array $value): static
+    public function paths($value): self
     {
         $this->paths = $value;
     
@@ -111,11 +109,10 @@ class TranslatorConfig
     }
     
     /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
-     *
+     * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
-    public function enabledLocales(ParamConfigurator|array $value): static
+    public function enabledLocales($value): self
     {
         $this->enabledLocales = $value;
     

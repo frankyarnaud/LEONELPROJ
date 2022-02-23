@@ -22,7 +22,7 @@ class AnnotationsConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function enabled($value): static
+    public function enabled($value): self
     {
         $this->enabled = $value;
     
@@ -34,7 +34,7 @@ class AnnotationsConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function cache($value): static
+    public function cache($value): self
     {
         $this->cache = $value;
     
@@ -46,7 +46,7 @@ class AnnotationsConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function fileCacheDir($value): static
+    public function fileCacheDir($value): self
     {
         $this->fileCacheDir = $value;
     
@@ -58,7 +58,7 @@ class AnnotationsConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function debug($value): static
+    public function debug($value): self
     {
         $this->debug = $value;
     

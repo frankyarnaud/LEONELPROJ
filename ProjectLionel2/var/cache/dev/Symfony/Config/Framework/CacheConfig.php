@@ -32,7 +32,7 @@ class CacheConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function prefixSeed($value): static
+    public function prefixSeed($value): self
     {
         $this->prefixSeed = $value;
     
@@ -45,7 +45,7 @@ class CacheConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function app($value): static
+    public function app($value): self
     {
         $this->app = $value;
     
@@ -58,7 +58,7 @@ class CacheConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function system($value): static
+    public function system($value): self
     {
         $this->system = $value;
     
@@ -70,7 +70,7 @@ class CacheConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function directory($value): static
+    public function directory($value): self
     {
         $this->directory = $value;
     
@@ -82,7 +82,7 @@ class CacheConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function defaultDoctrineProvider($value): static
+    public function defaultDoctrineProvider($value): self
     {
         $this->defaultDoctrineProvider = $value;
     
@@ -94,7 +94,7 @@ class CacheConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function defaultPsr6Provider($value): static
+    public function defaultPsr6Provider($value): self
     {
         $this->defaultPsr6Provider = $value;
     
@@ -106,7 +106,7 @@ class CacheConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function defaultRedisProvider($value): static
+    public function defaultRedisProvider($value): self
     {
         $this->defaultRedisProvider = $value;
     
@@ -118,7 +118,7 @@ class CacheConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function defaultMemcachedProvider($value): static
+    public function defaultMemcachedProvider($value): self
     {
         $this->defaultMemcachedProvider = $value;
     
@@ -130,7 +130,7 @@ class CacheConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function defaultDoctrineDbalProvider($value): static
+    public function defaultDoctrineDbalProvider($value): self
     {
         $this->defaultDoctrineDbalProvider = $value;
     
@@ -142,7 +142,7 @@ class CacheConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function defaultPdoProvider($value): static
+    public function defaultPdoProvider($value): self
     {
         $this->defaultPdoProvider = $value;
     

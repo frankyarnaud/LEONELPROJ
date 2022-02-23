@@ -38,7 +38,7 @@ class SecurityConfig implements \Symfony\Component\Config\Builder\ConfigBuilderI
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function accessDeniedUrl($value): static
+    public function accessDeniedUrl($value): self
     {
         $this->accessDeniedUrl = $value;
     
@@ -50,7 +50,7 @@ class SecurityConfig implements \Symfony\Component\Config\Builder\ConfigBuilderI
      * @param ParamConfigurator|'none'|'migrate'|'invalidate' $value
      * @return $this
      */
-    public function sessionFixationStrategy($value): static
+    public function sessionFixationStrategy($value): self
     {
         $this->sessionFixationStrategy = $value;
     
@@ -62,7 +62,7 @@ class SecurityConfig implements \Symfony\Component\Config\Builder\ConfigBuilderI
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function hideUserNotFound($value): static
+    public function hideUserNotFound($value): self
     {
         $this->hideUserNotFound = $value;
     
@@ -75,7 +75,7 @@ class SecurityConfig implements \Symfony\Component\Config\Builder\ConfigBuilderI
      * @deprecated The child node "always_authenticate_before_granting" at path "security" is deprecated.
      * @return $this
      */
-    public function alwaysAuthenticateBeforeGranting($value): static
+    public function alwaysAuthenticateBeforeGranting($value): self
     {
         $this->alwaysAuthenticateBeforeGranting = $value;
     
@@ -87,7 +87,7 @@ class SecurityConfig implements \Symfony\Component\Config\Builder\ConfigBuilderI
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function eraseCredentials($value): static
+    public function eraseCredentials($value): self
     {
         $this->eraseCredentials = $value;
     
@@ -100,7 +100,7 @@ class SecurityConfig implements \Symfony\Component\Config\Builder\ConfigBuilderI
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function enableAuthenticatorManager($value): static
+    public function enableAuthenticatorManager($value): self
     {
         $this->enableAuthenticatorManager = $value;
     
@@ -172,9 +172,10 @@ class SecurityConfig implements \Symfony\Component\Config\Builder\ConfigBuilderI
     }
     
     /**
+     * @param ParamConfigurator|array $value
      * @return $this
      */
-    public function roleHierarchy(string $id, ParamConfigurator|array $value): static
+    public function roleHierarchy(string $id, $value): self
     {
         $this->roleHierarchy[$id] = $value;
     

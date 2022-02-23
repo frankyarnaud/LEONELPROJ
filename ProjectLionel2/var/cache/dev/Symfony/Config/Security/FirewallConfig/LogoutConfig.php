@@ -28,7 +28,7 @@ class LogoutConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function csrfParameter($value): static
+    public function csrfParameter($value): self
     {
         $this->csrfParameter = $value;
     
@@ -40,7 +40,7 @@ class LogoutConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function csrfTokenGenerator($value): static
+    public function csrfTokenGenerator($value): self
     {
         $this->csrfTokenGenerator = $value;
     
@@ -52,7 +52,7 @@ class LogoutConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function csrfTokenId($value): static
+    public function csrfTokenId($value): self
     {
         $this->csrfTokenId = $value;
     
@@ -64,7 +64,7 @@ class LogoutConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function path($value): static
+    public function path($value): self
     {
         $this->path = $value;
     
@@ -76,7 +76,7 @@ class LogoutConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function target($value): static
+    public function target($value): self
     {
         $this->target = $value;
     
@@ -89,7 +89,7 @@ class LogoutConfig
      * @deprecated The "success_handler" at path "logout" is deprecated, register a listener on the "Symfony\Component\Security\Http\Event\LogoutEvent" event instead.
      * @return $this
      */
-    public function successHandler($value): static
+    public function successHandler($value): self
     {
         $this->successHandler = $value;
     
@@ -101,7 +101,7 @@ class LogoutConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function invalidateSession($value): static
+    public function invalidateSession($value): self
     {
         $this->invalidateSession = $value;
     
@@ -121,11 +121,10 @@ class LogoutConfig
     }
     
     /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
-     *
+     * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
-    public function handlers(ParamConfigurator|array $value): static
+    public function handlers($value): self
     {
         $this->handlers = $value;
     

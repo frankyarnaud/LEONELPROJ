@@ -63,7 +63,7 @@ class FirewallConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function pattern($value): static
+    public function pattern($value): self
     {
         $this->pattern = $value;
     
@@ -75,7 +75,7 @@ class FirewallConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function host($value): static
+    public function host($value): self
     {
         $this->host = $value;
     
@@ -83,11 +83,10 @@ class FirewallConfig
     }
     
     /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
-     *
+     * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
-    public function methods(ParamConfigurator|array $value): static
+    public function methods($value): self
     {
         $this->methods = $value;
     
@@ -99,7 +98,7 @@ class FirewallConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function security($value): static
+    public function security($value): self
     {
         $this->security = $value;
     
@@ -112,7 +111,7 @@ class FirewallConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function userChecker($value): static
+    public function userChecker($value): self
     {
         $this->userChecker = $value;
     
@@ -124,7 +123,7 @@ class FirewallConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function requestMatcher($value): static
+    public function requestMatcher($value): self
     {
         $this->requestMatcher = $value;
     
@@ -136,7 +135,7 @@ class FirewallConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function accessDeniedUrl($value): static
+    public function accessDeniedUrl($value): self
     {
         $this->accessDeniedUrl = $value;
     
@@ -148,7 +147,7 @@ class FirewallConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function accessDeniedHandler($value): static
+    public function accessDeniedHandler($value): self
     {
         $this->accessDeniedHandler = $value;
     
@@ -161,7 +160,7 @@ class FirewallConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function entryPoint($value): static
+    public function entryPoint($value): self
     {
         $this->entryPoint = $value;
     
@@ -173,7 +172,7 @@ class FirewallConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function provider($value): static
+    public function provider($value): self
     {
         $this->provider = $value;
     
@@ -185,7 +184,7 @@ class FirewallConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function stateless($value): static
+    public function stateless($value): self
     {
         $this->stateless = $value;
     
@@ -197,7 +196,7 @@ class FirewallConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function lazy($value): static
+    public function lazy($value): self
     {
         $this->lazy = $value;
     
@@ -209,7 +208,7 @@ class FirewallConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function context($value): static
+    public function context($value): self
     {
         $this->context = $value;
     
@@ -239,11 +238,10 @@ class FirewallConfig
     }
     
     /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
-     *
+     * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
-    public function requiredBadges(ParamConfigurator|array $value): static
+    public function requiredBadges($value): self
     {
         $this->requiredBadges = $value;
     
@@ -262,11 +260,10 @@ class FirewallConfig
     }
     
     /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
-     *
+     * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
-    public function customAuthenticators(ParamConfigurator|array $value): static
+    public function customAuthenticators($value): self
     {
         $this->customAuthenticators = $value;
     

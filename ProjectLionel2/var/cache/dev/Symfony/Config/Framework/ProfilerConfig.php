@@ -25,7 +25,7 @@ class ProfilerConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function enabled($value): static
+    public function enabled($value): self
     {
         $this->enabled = $value;
     
@@ -37,7 +37,7 @@ class ProfilerConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function collect($value): static
+    public function collect($value): self
     {
         $this->collect = $value;
     
@@ -50,7 +50,7 @@ class ProfilerConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function collectParameter($value): static
+    public function collectParameter($value): self
     {
         $this->collectParameter = $value;
     
@@ -62,7 +62,7 @@ class ProfilerConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function onlyExceptions($value): static
+    public function onlyExceptions($value): self
     {
         $this->onlyExceptions = $value;
     
@@ -74,7 +74,7 @@ class ProfilerConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
-    public function onlyMainRequests($value): static
+    public function onlyMainRequests($value): self
     {
         $this->onlyMainRequests = $value;
     
@@ -87,7 +87,7 @@ class ProfilerConfig
      * @deprecated Option "only_master_requests" at "profiler" is deprecated, use "only_main_requests" instead.
      * @return $this
      */
-    public function onlyMasterRequests($value): static
+    public function onlyMasterRequests($value): self
     {
         $this->onlyMasterRequests = $value;
     
@@ -99,7 +99,7 @@ class ProfilerConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function dsn($value): static
+    public function dsn($value): self
     {
         $this->dsn = $value;
     

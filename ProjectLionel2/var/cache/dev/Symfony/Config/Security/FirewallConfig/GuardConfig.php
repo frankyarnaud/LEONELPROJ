@@ -22,7 +22,7 @@ class GuardConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function provider($value): static
+    public function provider($value): self
     {
         $this->provider = $value;
     
@@ -35,7 +35,7 @@ class GuardConfig
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
-    public function entryPoint($value): static
+    public function entryPoint($value): self
     {
         $this->entryPoint = $value;
     
@@ -43,11 +43,10 @@ class GuardConfig
     }
     
     /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
-     *
+     * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
-    public function authenticators(ParamConfigurator|array $value): static
+    public function authenticators($value): self
     {
         $this->authenticators = $value;
     
